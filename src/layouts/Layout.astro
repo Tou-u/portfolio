@@ -19,11 +19,11 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="dark text-foreground bg-background">
+    <header class="py-2">
+      <NavBar client:only />
+    </header>
     <main class="max-w-6xl m-auto">
-      <header class="py-2">
-        <NavBar client:only />
-      </header>
-      <section class="h-[calc(100vh-71px)]">
+      <section class="h-[calc(100dvh-71px)]">
         <slot />
       </section>
     </main>
