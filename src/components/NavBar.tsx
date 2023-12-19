@@ -3,7 +3,7 @@ import { Link } from "@nextui-org/link";
 import { useEffect, useState } from "react";
 
 export default function NavBar() {
-  const [hash, setHash] = useState<string>("");
+  const [hash, setHash] = useState<string>();
 
   useEffect(() => {
     const handleHashChange = () => setHash(window.location.hash);
@@ -26,7 +26,7 @@ export default function NavBar() {
         className="rounded-full border-2"
       >
         <NavbarContent>
-          <NavbarItem isActive={["", "#home"].includes(hash)}>
+          <NavbarItem isActive={["", "#home"].includes(hash!)}>
             <Link color="foreground" href="#home">
               Home
             </Link>
