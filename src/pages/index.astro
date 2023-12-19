@@ -2,23 +2,29 @@
 import Layout from "../layouts/Layout.astro";
 import Swiper from "../components/Swiper";
 import Card from "../components/Card";
+import NavBar from "../components/NavBar";
 ---
 
 <Layout title="Rodrigo Riquelme">
-  <Swiper client:only>
-    <div slot="first" class="container h-full px-2 pb-2 gap-2">
-      <div class="main">
-        <Card />
-      </div><div class="info">
-        <Card />
-      </div><div class="jobs">
-        <Card />
-      </div><div class="technologies">
-        <Card />
+  <section class="py-2">
+    <NavBar client:load />
+  </section>
+  <section class="h-[calc(100dvh-71px)]">
+    <Swiper client:only>
+      <div slot="first" class="container h-full px-2 pb-2 gap-2">
+        <div class="main">
+          <Card />
+        </div><div class="info">
+          <Card />
+        </div><div class="jobs">
+          <Card />
+        </div><div class="technologies">
+          <Card />
+        </div>
       </div>
-    </div>
-    <div slot="second">Second Page</div>
-  </Swiper>
+      <div slot="second">Second Page</div>
+    </Swiper>
+  </section>
 </Layout>
 
 <style>
