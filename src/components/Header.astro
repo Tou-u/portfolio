@@ -1,12 +1,17 @@
 ---
 import LinkedIn from "./icons/LinkedIn.astro";
 import GitHub from "./icons/GitHub.astro";
+import { Image } from "astro:assets";
+import Perfil from "../images/perfil.jpg";
+import Insignia from "../images/insignia.webp";
 ---
 
 <section class="p-4 flex gap-2">
-  <div class="flex flex-1 flex-col sm:flex-row gap-1 sm:justify-between">
+  <div
+    class="flex flex-1 flex-col sm:flex-row gap-x-2 gap-y-1 sm:justify-between"
+  >
     <div class="flex gap-4">
-      <img src="/img.jpg" class="w-[40%] object-contain" />
+      <Image src={Perfil} alt="perfil" class="w-[40%] object-contain" />
       <div>
         <p class="text-3xl">Rodrigo Riquelme</p>
         <div class="flex items-center gap-1">
@@ -16,7 +21,7 @@ import GitHub from "./icons/GitHub.astro";
         <p class="font-semibold text-lg sm:pt-8">
           Desarrollador Web Full Stack
         </p>
-        <div class="flex gap-2">
+        <div class="flex gap-2 pt-1">
           <LinkedIn />
           <GitHub />
         </div>
@@ -24,17 +29,17 @@ import GitHub from "./icons/GitHub.astro";
     </div>
     <div class="flex flex-col w-full max-w-xs mx-auto sm:mx-0">
       <div
-        class="flex items-center gap-2 pb-2 justify-center sm:justify-normal"
+        class="flex items-center gap-2 pb-1 justify-center sm:justify-normal"
       >
         <p>Nivel</p>
         <div
-          class="flex border-2 h-7 w-7 rounded-full items-center justify-center"
+          class="flex border-2 h-7 w-7 rounded-full items-center justify-center border-orange-300"
         >
           <span>99</span>
         </div>
       </div>
       <div class="bg-black/50 rounded-md p-2 flex items-center gap-2">
-        <img src="/insignia.webp" class="w-16 rounded-md" />
+        <Image src={Insignia} alt="Insignia" class="w-16 rounded-md" />
         <div>
           <p>Alquimista de Acero</p>
           <p>500 XP</p>

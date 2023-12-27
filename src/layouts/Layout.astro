@@ -1,3 +1,7 @@
+---
+import NavBar from "../components/NavBar.astro";
+---
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -9,8 +13,9 @@
     <title>Rodrigo Riquelme - Portafolio</title>
   </head>
   <body class="background text-white">
+    <NavBar />
     <main
-      class="h-screen max-w-6xl m-auto shadow-[3px_27px_111px_5px_rgba(175,_46,_138,_0.13)]"
+      class="max-w-6xl m-auto shadow-[3px_27px_111px_5px_rgba(175,_46,_138,_0.13)]"
     >
       <slot />
     </main>
