@@ -1,57 +1,9 @@
 ---
+import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
-import Swiper from "../components/Swiper";
-import Card from "../components/Card";
-import NavBar from "../components/NavBar";
 ---
 
 <Layout title="Rodrigo Riquelme">
-  <section class="py-2">
-    <NavBar client:idle />
-  </section>
-  <section class="h-[calc(100dvh-71px)]">
-    <Swiper client:only>
-      <div slot="first" class="container h-full px-2 pb-2 gap-2">
-        <div class="main">
-          <Card />
-        </div><div class="info">
-          <Card />
-        </div><div class="jobs">
-          <Card />
-        </div><div class="technologies">
-          <Card />
-        </div>
-      </div>
-      <div slot="second">Second Page</div>
-    </Swiper>
-  </section>
+  <Header />
+  <h1>asddfasf</h1>
 </Layout>
-
-<style>
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "main main info"
-      "main main info"
-      "jobs technologies technologies";
-  }
-
-  .main {
-    grid-area: main;
-  }
-
-  .info {
-    grid-area: info;
-  }
-
-  .jobs {
-    grid-area: jobs;
-  }
-
-  .technologies {
-    grid-area: technologies;
-  }
-</style>

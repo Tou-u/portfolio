@@ -2,15 +2,44 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <!-- <meta name="description" content="Astro description" /> -->
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Rodrigo Riquelme - Portafolio</title>
   </head>
-  <body class="dark text-foreground bg-background">
-    <main class="max-w-6xl m-auto">
+  <body class="background text-white">
+    <main
+      class="h-screen max-w-6xl m-auto shadow-[3px_27px_111px_5px_rgba(175,_46,_138,_0.13)]"
+    >
       <slot />
     </main>
   </body>
 </html>
+
+<style>
+  .background {
+    background-image: repeating-linear-gradient(
+        80deg,
+        hsl(55, 0%, 7%) 0px,
+        hsl(55, 0%, 7%) 10px,
+        transparent 10px,
+        transparent 12px
+      ),
+      repeating-linear-gradient(
+        228deg,
+        hsl(55, 0%, 7%) 0px,
+        hsl(55, 0%, 7%) 10px,
+        transparent 10px,
+        transparent 12px
+      ),
+      repeating-linear-gradient(
+        127deg,
+        hsl(55, 0%, 7%) 0px,
+        hsl(55, 0%, 7%) 10px,
+        transparent 10px,
+        transparent 12px
+      ),
+      linear-gradient(90deg, rgb(136, 136, 136), rgb(92, 92, 92));
+  }
+</style>
