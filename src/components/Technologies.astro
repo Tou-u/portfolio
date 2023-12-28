@@ -20,31 +20,37 @@ import Zod from "../images/zod.svg";
   <div
     class="bg-[rgba(175,46,138,0.13)] p-2 rounded-t-md text-lg font-semibold"
   >
-    Tecnologías
+    Tecnologías Favoritas
   </div>
   <div class="bg-black/50 rounded-b-md py-4 px-2">
     <div
       class="grid grid-cols-[repeat(auto-fit,minmax(55px,1fr))] place-items-center gap-2"
     >
-      <Image src={React} alt="react icon" height={50} width={50} />
-      <Image src={Svelte} alt="svelte icon" height={50} width={50} />
-      <Image src={AstroIcon} alt="astro icon" height={50} width={50} />
-      <Image src={Next} alt="next icon" height={50} width={50} />
-      <Image src={Prisma} alt="prisma icon" height={50} width={50} />
-      <Image src={Docker} alt="docker icon" height={50} width={50} />
-      <Image src={GitHub} alt="github icon" height={50} width={50} />
-      <Image src={JavaScript} alt="javascript icon" height={50} width={50} />
-      <Image src={Postgres} alt="postgres icon" height={50} width={50} />
-      <Image src={Postman} alt="postman icon" height={50} width={50} />
-      <Image src={Supabase} alt="supabase icon" height={50} width={50} />
-      <Image src={Tailwindcss} alt="tailwind icon" height={50} width={50} />
-      <Image src={Typescript} alt="typescript icon" height={50} width={50} />
+      <Image src={React} alt="react icon" />
+      <Image src={Svelte} alt="svelte icon" />
+      <Image src={AstroIcon} alt="astro icon" />
+      <Image src={Next} alt="next icon" />
+      <Image src={Prisma} alt="prisma icon" />
+      <Image src={Docker} alt="docker icon" />
+      <Image src={GitHub} alt="github icon" />
+      <Image src={JavaScript} alt="javascript icon" />
+      <Image src={Postgres} alt="postgres icon" />
+      <Image src={Postman} alt="postman icon" />
+      <Image src={Supabase} alt="supabase icon" />
+      <Image src={Tailwindcss} alt="tailwind icon" />
+      <Image src={Typescript} alt="typescript icon" />
       <Image src={Zod} alt="zod icon" height={50} />
     </div>
   </div>
 </section>
 
 <style>
+  img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+  }
+
   img:hover {
     scale: 1.5;
   }
