@@ -1,22 +1,8 @@
 ---
-import { Image } from "astro:assets";
-import React from "../images/react.svg";
-import Svelte from "../images/svelte.svg";
-import AstroIcon from "../images/astro_dark.svg";
-import Next from "../images/nextjs.svg";
-import Prisma from "../images/prisma_dark.svg";
-import Docker from "../images/docker.svg";
-import GitHub from "../images/git.svg";
-import JavaScript from "../images/javascript.svg";
-import Postgres from "../images/postgresql.svg";
-import Postman from "../images/postman.svg";
-import Supabase from "../images/supabase.svg";
-import Tailwindcss from "../images/tailwindcss.svg";
-import Typescript from "../images/typescript.svg";
-import Zod from "../images/zod.svg";
+import { Icon } from "astro-icon/components";
 ---
 
-<section class="px-4 pb-4">
+<section class="px-4 pb-4 overflow-hidden">
   <div
     class="bg-[rgba(175,46,138,0.13)] p-2 rounded-t-md text-lg font-semibold"
   >
@@ -24,34 +10,33 @@ import Zod from "../images/zod.svg";
   </div>
   <div class="bg-black/50 rounded-b-md py-4 px-2">
     <div
-      class="grid grid-cols-[repeat(auto-fit,minmax(55px,1fr))] place-items-center gap-2"
+      class="grid grid-cols-[repeat(auto-fit,minmax(50px,1fr))] place-items-center gap-2"
     >
-      <Image src={React} alt="react icon" />
-      <Image src={Svelte} alt="svelte icon" />
-      <Image src={AstroIcon} alt="astro icon" />
-      <Image src={Next} alt="next icon" />
-      <Image src={Prisma} alt="prisma icon" />
-      <Image src={Docker} alt="docker icon" />
-      <Image src={GitHub} alt="github icon" />
-      <Image src={JavaScript} alt="javascript icon" />
-      <Image src={Postgres} alt="postgres icon" />
-      <Image src={Postman} alt="postman icon" />
-      <Image src={Supabase} alt="supabase icon" />
-      <Image src={Tailwindcss} alt="tailwind icon" />
-      <Image src={Typescript} alt="typescript icon" />
-      <Image src={Zod} alt="zod icon" height={50} />
+      <Icon name="react" />
+      <Icon name="svelte" />
+      <Icon name="astro" />
+      <Icon name="nextdotjs" />
+      <Icon name="tailwindcss" />
+      <Icon name="prisma" />
+      <Icon name="docker" />
+      <Icon name="git" />
+      <Icon name="javascript" />
+      <Icon name="postgres" />
+      <Icon name="postman" />
+      <Icon name="supabase" />
+      <Icon name="typescript" />
+      <Icon name="zod" />
     </div>
   </div>
 </section>
 
 <style>
-  img {
+  [data-icon] {
     height: 50px;
-    width: 50px;
-    object-fit: contain;
+    width: 100%;
   }
 
-  img:hover {
-    scale: 1.5;
+  [data-icon]:hover {
+    scale: 1.3;
   }
 </style>

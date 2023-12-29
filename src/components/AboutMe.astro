@@ -1,9 +1,7 @@
 ---
 import LinkedIn from "./icons/LinkedIn.astro";
 import GitHub from "./icons/GitHub.astro";
-import { Image } from "astro:assets";
-import Perfil from "../images/perfil.jpg";
-import Insignia from "../images/insignia.webp";
+import { Icon } from "astro-icon/components";
 ---
 
 <section id="aboutme" class="p-4 flex gap-2 text-balance">
@@ -12,12 +10,12 @@ import Insignia from "../images/insignia.webp";
   >
     <div class="flex gap-4">
       <div class="basis-[40%]">
-        <Image src={Perfil} alt="perfil" class="object-contain" />
+        <img src="/perfil.webp" alt="foto de perfil" />
       </div>
       <div>
         <p class="text-3xl">Rodrigo Riquelme</p>
         <div class="flex items-center gap-1">
-          <img src="/cl.svg" class="w-4 h-4" alt="bandera de chile" />
+          <Icon name="cl" class="size-4" />
           <p class="text-white/80">Concepción, Chile.</p>
         </div>
         <p class="font-semibold text-lg sm:pt-8">
@@ -40,7 +38,11 @@ import Insignia from "../images/insignia.webp";
         </div>
       </div>
       <div class="bg-black/50 rounded-md p-2 flex items-center gap-2">
-        <Image src={Insignia} alt="Insignia" class="w-16 h-16 rounded-md" />
+        <img
+          src="/insignia.webp"
+          class="size-10 sm:size-14 md:size-16 rounded-md"
+          alt="insignia"
+        />
         <div>
           <p>Alquimista de Acero</p>
           <p>500 XP</p>
