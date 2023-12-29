@@ -1,9 +1,8 @@
 ---
-import Briefcase from "./icons/Briefcase.astro";
-import Cap from "./icons/Cap.astro";
+import { Icon } from "astro-icon/components";
 ---
 
-<section id="experience" class="px-4 pb-4">
+<section id="experience" class="px-4 pb-4 w-full">
   <div
     class="bg-[rgba(175,46,138,0.13)] p-2 rounded-t-md text-lg font-semibold"
   >
@@ -13,8 +12,8 @@ import Cap from "./icons/Cap.astro";
     class="bg-black/50 rounded-b-md py-4 flex items-center justify-center px-6"
   >
     <div class="space-y-2 border-l-2 border-dashed">
-      <div class="relative w-full">
-        <Briefcase />
+      <div class="relative w-full exp">
+        <Icon name="briefcase" class="badge" />
         <div class="ml-6">
           <h4 class="font-bold">
             Asistente técnico para especialidad de pintura y andamios
@@ -26,8 +25,8 @@ import Cap from "./icons/Cap.astro";
         </div>
       </div>
 
-      <div class="relative w-full">
-        <Cap />
+      <div class="relative w-full exp">
+        <Icon name="cap" class="badge" />
         <div class="ml-6">
           <h4 class="font-bold">Ingeniería en Informática.</h4>
           <p class="mt-2 max-w-screen-sm text-sm text-white/80">
@@ -41,8 +40,8 @@ import Cap from "./icons/Cap.astro";
           <span class="mt-1 text-sm font-semibold">2017-2022</span>
         </div>
       </div>
-      <div class="relative w-full">
-        <Cap />
+      <div class="relative w-full exp">
+        <Icon name="cap" class="badge" />
         <div class="ml-6">
           <h4 class="font-bold">
             Técnico en Administración de Empresas mención en Recursos Humanos.
@@ -56,3 +55,24 @@ import Cap from "./icons/Cap.astro";
     </div>
   </div>
 </section>
+
+<style>
+  .badge {
+    position: absolute;
+    top: -0.125rem;
+    z-index: 10;
+    margin-left: -0.875rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 9999px;
+    background: white;
+    padding: 0.25rem;
+    color: black;
+  }
+
+  .exp:hover {
+    svg {
+      scale: 120%;
+    }
+  }
+</style>
