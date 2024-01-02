@@ -84,11 +84,14 @@ import { ViewTransitions } from "astro:transitions";
           linear-gradient(90deg, rgb(22, 22, 22), rgb(236, 16, 218));
         background-blend-mode: overlay, overlay, overlay, normal;
         content: "";
-        height: 100dvh;
-        width: 100%;
         position: fixed;
-        top: 0;
         z-index: -1;
+        display: block;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        background-position: center top;
       }
     </style>
   </body>
