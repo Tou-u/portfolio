@@ -20,12 +20,16 @@ import { ViewTransitions } from "astro:transitions";
   <body class="text-white background">
     <!-- <NavBar /> -->
     <main
-      class="max-w-6xl mx-auto my-1 shadow-[3px_27px_111px_5px_rgba(255,255,255,_0.13)] rounded-md min-h-[calc(100dvh-8px)]"
+      class="max-w-6xl mx-auto my-1 shadow-[3px_27px_111px_5px_rgba(255,255,255,_0.13)] rounded-md"
     >
       <slot />
     </main>
     <style>
       .background {
+        position: relative;
+      }
+
+      .background::before {
         background-image: linear-gradient(
             45deg,
             rgb(10, 10, 10) 0%,
@@ -79,7 +83,12 @@ import { ViewTransitions } from "astro:transitions";
           ),
           linear-gradient(90deg, rgb(22, 22, 22), rgb(236, 16, 218));
         background-blend-mode: overlay, overlay, overlay, normal;
-        background-attachment: fixed;
+        content: "";
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: -1;
       }
     </style>
   </body>
