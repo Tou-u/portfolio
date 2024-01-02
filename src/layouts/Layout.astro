@@ -1,5 +1,6 @@
 ---
 import NavBar from "../components/NavBar.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -14,71 +15,72 @@ import NavBar from "../components/NavBar.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Portafolio de Rodrigo Riquelme | Desarrollador Web Full Stack</title>
+    <ViewTransitions />
   </head>
   <body class="text-white background">
-    <NavBar />
+    <!-- <NavBar /> -->
     <main
-      class="max-w-6xl mx-auto mt-11 shadow-[3px_27px_111px_5px_rgba(255,255,255,_0.13)] rounded-md min-h-screen mb-1"
+      class="max-w-6xl mx-auto my-1 shadow-[3px_27px_111px_5px_rgba(255,255,255,_0.13)] rounded-md min-h-[calc(100dvh-8px)]"
     >
       <slot />
     </main>
+    <style>
+      .background {
+        background-image: linear-gradient(
+            45deg,
+            rgb(10, 10, 10) 0%,
+            rgb(10, 10, 10) 60%,
+            rgb(35, 35, 35) 60%,
+            rgb(35, 35, 35) 62%,
+            rgb(60, 60, 60) 62%,
+            rgb(60, 60, 60) 76%,
+            rgb(85, 85, 85) 76%,
+            rgb(85, 85, 85) 77%,
+            rgb(109, 109, 109) 77%,
+            rgb(109, 109, 109) 86%,
+            rgb(134, 134, 134) 86%,
+            rgb(134, 134, 134) 92%,
+            rgb(159, 159, 159) 92%,
+            rgb(159, 159, 159) 100%
+          ),
+          linear-gradient(
+            112.5deg,
+            rgb(10, 10, 10) 0%,
+            rgb(10, 10, 10) 60%,
+            rgb(35, 35, 35) 60%,
+            rgb(35, 35, 35) 62%,
+            rgb(60, 60, 60) 62%,
+            rgb(60, 60, 60) 76%,
+            rgb(85, 85, 85) 76%,
+            rgb(85, 85, 85) 77%,
+            rgb(109, 109, 109) 77%,
+            rgb(109, 109, 109) 86%,
+            rgb(134, 134, 134) 86%,
+            rgb(134, 134, 134) 92%,
+            rgb(159, 159, 159) 92%,
+            rgb(159, 159, 159) 100%
+          ),
+          linear-gradient(
+            45deg,
+            rgb(10, 10, 10) 0%,
+            rgb(10, 10, 10) 60%,
+            rgb(35, 35, 35) 60%,
+            rgb(35, 35, 35) 62%,
+            rgb(60, 60, 60) 62%,
+            rgb(60, 60, 60) 76%,
+            rgb(85, 85, 85) 76%,
+            rgb(85, 85, 85) 77%,
+            rgb(109, 109, 109) 77%,
+            rgb(109, 109, 109) 86%,
+            rgb(134, 134, 134) 86%,
+            rgb(134, 134, 134) 92%,
+            rgb(159, 159, 159) 92%,
+            rgb(159, 159, 159) 100%
+          ),
+          linear-gradient(90deg, rgb(22, 22, 22), rgb(236, 16, 218));
+        background-blend-mode: overlay, overlay, overlay, normal;
+        background-attachment: fixed;
+      }
+    </style>
   </body>
 </html>
-
-<style>
-  .background {
-    background-image: linear-gradient(
-        45deg,
-        rgb(10, 10, 10) 0%,
-        rgb(10, 10, 10) 60%,
-        rgb(35, 35, 35) 60%,
-        rgb(35, 35, 35) 62%,
-        rgb(60, 60, 60) 62%,
-        rgb(60, 60, 60) 76%,
-        rgb(85, 85, 85) 76%,
-        rgb(85, 85, 85) 77%,
-        rgb(109, 109, 109) 77%,
-        rgb(109, 109, 109) 86%,
-        rgb(134, 134, 134) 86%,
-        rgb(134, 134, 134) 92%,
-        rgb(159, 159, 159) 92%,
-        rgb(159, 159, 159) 100%
-      ),
-      linear-gradient(
-        112.5deg,
-        rgb(10, 10, 10) 0%,
-        rgb(10, 10, 10) 60%,
-        rgb(35, 35, 35) 60%,
-        rgb(35, 35, 35) 62%,
-        rgb(60, 60, 60) 62%,
-        rgb(60, 60, 60) 76%,
-        rgb(85, 85, 85) 76%,
-        rgb(85, 85, 85) 77%,
-        rgb(109, 109, 109) 77%,
-        rgb(109, 109, 109) 86%,
-        rgb(134, 134, 134) 86%,
-        rgb(134, 134, 134) 92%,
-        rgb(159, 159, 159) 92%,
-        rgb(159, 159, 159) 100%
-      ),
-      linear-gradient(
-        45deg,
-        rgb(10, 10, 10) 0%,
-        rgb(10, 10, 10) 60%,
-        rgb(35, 35, 35) 60%,
-        rgb(35, 35, 35) 62%,
-        rgb(60, 60, 60) 62%,
-        rgb(60, 60, 60) 76%,
-        rgb(85, 85, 85) 76%,
-        rgb(85, 85, 85) 77%,
-        rgb(109, 109, 109) 77%,
-        rgb(109, 109, 109) 86%,
-        rgb(134, 134, 134) 86%,
-        rgb(134, 134, 134) 92%,
-        rgb(159, 159, 159) 92%,
-        rgb(159, 159, 159) 100%
-      ),
-      linear-gradient(90deg, rgb(22, 22, 22), rgb(169, 169, 169));
-    background-blend-mode: overlay, overlay, overlay, normal;
-  }
-</style>
