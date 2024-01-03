@@ -3,7 +3,7 @@ import RightArrow from "../components/icons/RightArrow.astro";
 const { title, img, project } = Astro.props;
 ---
 
-<a class="card" href={project}>
+<a class="card w-full max-w-96 min-w-64" href={project}>
   <img
     class="w-full h-full"
     src={img}
@@ -26,7 +26,6 @@ const { title, img, project } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 270px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     border-radius: 10px;

@@ -6,11 +6,18 @@ import Card from "./Card.astro";
   <div class="bg-white/15 p-2 rounded-t-md text-lg font-semibold">
     Proyectos Personales
   </div>
-  <div class="bg-black/50 rounded-b-md py-4 px-2 flex-1">
+  <div
+    class="bg-black/50 rounded-b-md py-4 px-2 grid grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-3 place-items-center"
+  >
     <Card
       title="Gaming Shop"
       img="/gamingshop/gamingshop.webp"
       project="/gamingshop"
+    />
+    <Card
+      title="App de Presupuesto"
+      img="/gamingshop/gamingshop.webp"
+      project="/presupuesto"
     />
   </div>
 </section>
