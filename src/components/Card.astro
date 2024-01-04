@@ -3,13 +3,13 @@ import RightArrow from "../components/icons/RightArrow.astro";
 const { title, img, project } = Astro.props;
 ---
 
-<a class="card w-full max-w-96 min-w-64" href={project}>
+<a class="card w-full max-w-96 min-w-64 aspect-[4/3]" href={project}>
   <img
-    class="w-full h-full"
+    class="w-full h-full object-cover object-left"
     src={img}
-    width="266"
-    height="241"
-    alt="Previsualización de mi app Gaming Shop"
+    width="356"
+    height="266"
+    alt={`Previsualización de mi app: ${title}`}
     transition:name={title}
   />
   <div
