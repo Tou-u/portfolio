@@ -1,0 +1,74 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import LeftArrow from "../../components/icons/LeftArrow.astro";
+import GitHub from "../../components/icons/GithubAlternative.astro";
+import World from "../../components/icons/World.astro";
+---
+
+<Layout>
+  <header class="p-4 text-center relative">
+    <a href="/">
+      <LeftArrow />
+    </a>
+    <h1 class="font-bold text-3xl pt-2">Restaurant RESTFul API</h1>
+    <h2>Pensado para el control del menú de un restaurant</h2>
+  </header>
+  <section class="flex flex-col p-4 gap-4">
+    <img
+      id="principal"
+      src="/restaurant/nestapi.webp"
+      transition:name="Restaurant_RESTFul_API"
+      width="2076"
+      height="1881"
+      class="mx-auto rounded-md max-h-[500px] object-contain"
+      alt="Página principal de la documentación de la api"
+    />
+    <article class="flex gap-2">
+      <a
+        href="https://github.com/Tou-u/restaurant"
+        target="_blank"
+        rel="noopener"
+        class="flex items-center p-2 gap-2 text-sm sm:text-lg font-semibold bg-[#560a4b] flex-1 rounded-md"
+        ><GitHub /> Código fuente</a
+      >
+      <a
+        href="https://zany-jade-horse-wrap.cyclic.app/"
+        target="_blank"
+        rel="noopener"
+        class="flex items-center p-2 gap-2 text-sm sm:text-lg font-semibold bg-[#560a4b] flex-1 rounded-md"
+      >
+        <World /> Probar Demo</a
+      >
+    </article>
+    <article>
+      <div class="bg-white/15 p-2 rounded-t-md text-lg font-semibold">
+        <h2>Características de la aplicación</h2>
+      </div>
+      <div
+        class="bg-black/50 rounded-b-md py-4 px-2 flex flex-col sm:flex-row gap-2"
+      >
+        <article class="w-full">
+          <ul class="list-disc list-inside">
+            <li>API totalmente documentada con Swagger</li>
+            <li>Autenticación y autorización para realizar las peticiones</li>
+            <li>Crea, edita y elimina comidas para tú menú</li>
+            <li>Busca las comidas por su nombre o categoría</li>
+            <li>Busca una comida por id o nombre</li>
+            <li>Crea, edita, elimina y busca categorías para tus comidas</li>
+            <li>Rellena la base de datos con un seeding inicial</li>
+          </ul>
+        </article>
+        <article class="w-full">
+          <p class="text-center font-semibold">Tecnologías utilizadas</p>
+          <ul class="list-disc list-inside">
+            <li>API desarrollada con NestJS y Fastify.</li>
+            <li>Base de datos PostgreSQL</li>
+            <li>Hosting API con Cyclic</li>
+            <li>Hosting de la base de datos con Render</li>
+            <li>TypeORM para consultas a la base de datos</li>
+          </ul>
+        </article>
+      </div>
+    </article>
+  </section>
+</Layout>
